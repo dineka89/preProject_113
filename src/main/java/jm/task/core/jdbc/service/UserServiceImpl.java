@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
+
     UserDao userDaoJDBC = new UserDaoHibernateImpl();
     public void createUsersTable() throws SQLException, ClassNotFoundException {
         userDaoJDBC.createUsersTable();
