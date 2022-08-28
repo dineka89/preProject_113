@@ -13,19 +13,19 @@ public class UserDaoJDBCImpl implements UserDao {
 
     }
 
-    public void createUsersTable()  {
+    public void createUsersTable() {
         try {
             Connection connection = Util.getMyConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("CREATE TABLE IF NOT EXISTS User (id INT primary key NOT NULL AUTO_INCREMENT, user_name VARCHAR(50), last_name VARCHAR(50), age INT)");
             preparedStatement.execute();
             connection.close();
         } catch (SQLException e) {
-        throw new RuntimeException(e);
+            throw new RuntimeException(e);
         } catch (IOException e) {
-        throw new RuntimeException(e);
+            throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
-        throw new RuntimeException(e);
-    }
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -122,8 +122,5 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-
     }
-
-
 }

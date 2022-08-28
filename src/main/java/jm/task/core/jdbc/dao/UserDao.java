@@ -7,15 +7,15 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface UserDao {
-    void createUsersTable() throws SQLException, ClassNotFoundException, IOException;
+    void createUsersTable();
 
-    void dropUsersTable() throws SQLException, ClassNotFoundException, IOException;
+    void dropUsersTable();
 
-    void saveUser(String name, String lastName, byte age) throws SQLException, ClassNotFoundException, IOException;
+    void saveUser(String name, String lastName, byte age);
 
-    void removeUserById(long id) throws SQLException, ClassNotFoundException, IOException;
+    void removeUserById(long id);
 
-    List<User> getAllUsers() throws SQLException, ClassNotFoundException, IOException;
+    List<User> getAllUsers();
 
-    void cleanUsersTable() throws SQLException, ClassNotFoundException, IOException;
+    void cleanUsersTable();
 }
