@@ -30,7 +30,6 @@ public class UserDaoHibernateImpl implements UserDao {
         } catch (RuntimeException e) {
             if (transaction != null) transaction.rollback();
         }
-
     }
 
     @Override
@@ -49,7 +48,6 @@ public class UserDaoHibernateImpl implements UserDao {
         } catch (RuntimeException e) {
             if (transaction != null) transaction.rollback();
         }
-
     }
 
     @Override
@@ -70,7 +68,6 @@ public class UserDaoHibernateImpl implements UserDao {
         } catch (RuntimeException e) {
             if (transaction != null) transaction.rollback();
         }
-
     }
 
     @Override
@@ -88,7 +85,6 @@ public class UserDaoHibernateImpl implements UserDao {
         } catch (RuntimeException e) {
             if (transaction != null) transaction.rollback();
         }
-
     }
 
     @Override
