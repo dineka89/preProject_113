@@ -6,11 +6,12 @@ import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
         UserService userService = new UserServiceImpl();
         userService.createUsersTable();
 
@@ -23,8 +24,8 @@ public class Main {
 
         userList.stream().forEach(e-> System.out.println(e.toString()));
 
-        userService.cleanUsersTable();
+//        userService.cleanUsersTable();
 
-        userService.dropUsersTable();
+//        userService.dropUsersTable();
     }
 }
